@@ -1,0 +1,61 @@
+class CartModel {
+  int id;
+  String idShop;
+  String idUser;
+  String nameShop;
+  String idFood;
+  String nameFood;
+  String price;
+  String amount;
+  String detail;
+  String sum;
+  String distance;
+  String transport;
+
+  CartModel(
+      {this.id,
+      this.idUser,
+      this.idShop,
+      this.nameShop,
+      this.idFood,
+      this.nameFood,
+      this.price,
+      this.amount,
+      this.detail,
+      this.sum,
+      this.distance,
+      this.transport});
+
+  CartModel.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    idUser = json['idUser'];
+    idShop = json['idShop'];
+    nameShop = json['nameShop'];
+    idFood = json['idFood'];
+    nameFood = json['nameFood'];
+    price = json['price'];
+    amount = json['amount'];
+    detail = json['detail'];
+    sum = json['sum'];
+    distance = json['distance'];
+    transport = json['transport'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['idUser'] = this.idUser;
+    data['idShop'] = this.idShop;
+    data['nameShop'] = this.nameShop;
+    data['idFood'] = this.idFood;
+    data['nameFood'] = this.nameFood;
+    data['price'] = this.price;
+    data['amount'] = this.amount;
+    data['detail'] = this.detail;
+    data['sum'] = this.sum;
+    data['distance'] = this.distance;
+    data['transport'] = this.transport;
+
+    return data;
+  }
+}
